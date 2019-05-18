@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="renderer.js"></script>
+    <link rel="stylesheet" href="back_end/Bootstrap4/css/bootstrap.css">
+    <link rel="stylesheet" href="Style/landing.css">
+    <title>Tree Generator</title>
+    <style>
+      div {
+        padding-left: 2em;
+        padding-top: 1em;
+      }
+      button.prunned {
+        padding: 1em 1em 0 1em;
+        background-color: rgb(199, 12, 12);
+        border: none;
+
+      }
+      .table-not-prunned {
+        background-color: rgb(177, 174, 166);
+      }
+      .table-not-prunned td {
+        box-sizing: border-box;
+        padding: 10px 20px;
+        font-weight: bold;
+        font-family: monospace;
+        font-size: 20px;
+      }
+      .table-prunned td {
+        box-sizing: border-box;
+        padding: 10px 20px;
+        font-weight: bold;
+        font-family: monospace;
+        font-size: 20px;
+      }
+      button.not-prunned {
+        padding: 1em 1em 0 1em;
+        background-color: rgb(58, 58, 58);
+        border: none;
+      }
+      table {
+        border-collapse: collapse;
+      }
+      table, tr, td {
+        border: 1px solid white;
+      }
+      #tabel td {
+        box-sizing: border-box;
+        padding: 10px 20px;
+        font-weight: bold;
+        font-family: monospace;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+          <div>
+            <h2>Tree Generator</h2>
+            <h3>Tic Tac Toe!</h3>
+            <a class="btn" href="index.html">Restart</a>
+          </div>
+          <div class="ml-auto">
+            <h6>Click the cell to input. </h6>
+            <h6>*the first turn is X</h6>
+          </div>
+      </div>
+      <div class="container">
+        <div>
+          <select class="form-control col-sm-2" onclick="buildTable()" name="size" id="size">
+            <option value="choose-size">Choose Size</option> <!-- ADDITION -->
+            <option value="3">3 X 3</option>
+            <option value="4">4 X 4</option>
+          </select>
+          <div class="col-sm-10"></div>
+        </div>
+      </div>
+      <div class="container">
+        <div>
+          <p class="row">
+            <p class="col-sm-2 card-header ">Root</p>
+            <p class="col-sm-10"></p>
+          </p>
+          <table id="tabel" class="table-active">
+          </table>
+        </div>
+      </div>
+      <div class="container">
+        <div>
+          <button id="generate-button" class="btn" onclick="generate()">Generate</button>
+        </div>
+      </div>
+      <div class="container">
+        <div id="root">
+        </div>
+      </div>
+      
+    </div>
+    <script>
+        // You can also require other files to run in this process
+      require('./renderer.js')
+    </script>
+  </body>
+</html>

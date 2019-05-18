@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tic Tac Toe Alpha-Beta Prunning</title>
+    <link rel="stylesheet" href="Style/landing.css">
+    <script src="back_end/scrollreveal-master/dist/scrollreveal.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="text-wrapper">
+            <h2 class="welcome-text line">Implementation of Algorithm</h2>
+            <h1 class="text-title line">Minimax with Alpha-Beta Prunning</h1>
+            <h2 class="tic-text line">Tic Tac Toe</h2>
+
+            <div class="group-details">
+                <h2>Group Members :</h2>
+                <center><table style="margin: 14px;">
+                    <tr>
+                        <td style="padding: 0px 16px;">Ersad Ahmad Ishlahuddin</td>
+                        <td style="padding: 0px 16px;">05111740000016</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0px 16px;">Bayu Laksana</td>
+                        <td style="padding: 0px 16px;">05111740000020</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0px 16px;">Iman Affandy</td>
+                        <td style="padding: 0px 16px;">05111740000129</td>
+                    </tr>
+                </table></center>
+                <a href="index.html" class="btn">Start!</a>
+            </div>
+        </div>
+        <ul class="bg-bubbles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <script>
+        var time = 2000;
+        window.Sr = ScrollReveal();
+        Sr.reveal('.text-wrapper', {
+            delay: time-700, origin: 'left', distance: '10px'
+        })
+        Sr.reveal('.welcome-text', {
+            delay: time,
+            origin: 'left',
+            distance: '30px'
+        });
+        Sr.reveal('.text-title', {
+            delay: time+200,
+            origin: 'left',
+            distance: '30px'
+        });
+        Sr.reveal('.tic-text', {
+            delay: time+300,
+            origin: 'left',
+            distance: '30px'
+        });
+        Sr.reveal('.group-details', {
+            delay: time+500,
+            origin: 'bottom',
+            distance: '30px'
+        });
+    </script>
+</body>
+</html>
